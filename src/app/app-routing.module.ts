@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'cards',
     loadChildren: './pages/cards/cards.module#CardsPageModule'
+  },
+  {
+    path: 'list',
+    loadChildren: './pages/list/list.module#ListPageModule'
   }
 ];
 @NgModule({

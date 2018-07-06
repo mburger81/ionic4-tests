@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background" no-padding>
+    <!--
+      1. Breaking change, in v3 `ion-list` for default used `lines`, in v4 it seems the default is none`.`
+      2. Having a look on the demo site https://beta.ionicframework.com/docs/api/list, it seems on IOS the default is with `lines`, in MD the default is `none`, in v3 there was no difference between v3 and v4 between the two modes
+      3. The `full` attribute wasn't in v3, but having a look at the screenshots the `inset` property has a different look and behavior
+    -->
+    <p>
+        <ion-label>DEFAULT</ion-label>
+        <ion-list>
+            <ion-item>Default 1</ion-item>
+            <ion-item>Default 2</ion-item>
+            <ion-item>Default 3</ion-item>
+            <ion-item>Default 4</ion-item>
+        </ion-list>
+    </p>
+    <p>
+        <ion-label>FULL</ion-label>
+        <ion-list lines="full">
+            <ion-item>Full 1</ion-item>
+            <ion-item>Full 2</ion-item>
+            <ion-item>Full 3</ion-item>
+            <ion-item>Full 4</ion-item>
+        </ion-list>
+    </p>
+    <p>
+        <ion-label>INSET</ion-label>
+        <ion-list lines="inset">
+            <ion-item>Inset 1</ion-item>
+            <ion-item>Inset 2</ion-item>
+            <ion-item>Inset 3</ion-item>
+            <ion-item>Inset 4</ion-item>
+        </ion-list>
+    </p>
+    <p>
+        <ion-label>NONE</ion-label>
+        <ion-list lines="none">
+            <ion-item>None 1</ion-item>
+            <ion-item>None 2</ion-item>
+            <ion-item>None 3</ion-item>
+            <ion-item>None 4</ion-item>
+        </ion-list>
+    </p>
+
+</ion-content>
