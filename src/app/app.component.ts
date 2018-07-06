@@ -29,6 +29,16 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Form',
+      url: '/form',
+      icon: 'reorder'
+    },
+    {
+      title: 'List Buttons',
+      url: '/list-buttons',
+      icon: 'list-box'
     }
   ];
 

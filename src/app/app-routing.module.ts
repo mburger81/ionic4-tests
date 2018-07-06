@@ -22,6 +22,14 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './pages/list/list.module#ListPageModule'
+  },
+  {
+    path: 'form',
+    loadChildren: './pages/form/form.module#FormPageModule'
+  },
+  {
+    path: 'list-buttons',
+    loadChildren: './pages/list-buttons/list-buttons.module#ListButtonsPageModule'
   }
 ];
 @NgModule({

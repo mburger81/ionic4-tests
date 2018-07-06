@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Ion Buttons in Ion List
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+    <!--
+      1. in v3 we can not use anymore `ion-buttons` as a standalone component, having a look from documentation we should use it inside `ion-toolbar`, but on v3 we was able to use it everywhere with the same result, so this is a braking change. If so which would be the best approach to do ACTIONS container outside from ion-toolbar, like in cards or somewhere else? We are able to use it well on this behavior #14723
+      2. The default style of the `ion-button` element in an `ion-buttons` does change. in v3 it was a `solid` button in the default seems to be a `clear` button. See screenshot.
+      3. If we use `fill="solid"` there is no padding between the two buttons. See buttons on bottom of v4 screenshot.
+    -->
+    <ion-list>
+        <ion-buttons slot="end">
+            <ion-button color="primary" >Cancel</ion-button>
+            <ion-button type="submit" color="primary" >Save</ion-button>
+        </ion-buttons>
+    </ion-list>
+    <ion-list>
+        <ion-buttons slot="end">
+            <ion-button fill="solid" color="primary" >Cancel</ion-button>
+            <ion-button fill="solid" type="submit" color="primary" >Save</ion-button>
+        </ion-buttons>
+    </ion-list>
+</ion-content>
