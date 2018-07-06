@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Cards
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <!--
+      1. You can use `ion-card-subtitle` before `ion-card-title`, but this should be a wrong usage and probably you can avoid this by using slots, right? In this case it would be independent from the order you list it in code, we found this bug on your first card example in docs https://beta.ionicframework.com/docs/api/card
+      2. The `ion-card-header` on MD should be 20px instead of 24px, right?
+      3. setting `color` attribute to `ion-card-header` does not have any effect, perhaps color attribute is already documented on docs but not implemented on `alpha.7`?
+    -->
+    <ion-card>
+        <ion-card-header color="success">
+            <ion-card-subtitle>Some subtext</ion-card-subtitle>
+            <ion-card-title>This should be 20px and not 24px font-size on MD</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            Content
+        </ion-card-content>
+    </ion-card>
+    <!--
+      4. We are not sure how to use `ACTIONS` in `ion-card-header`, perhaps we are missing something or there is a bug, but having a look to your documentation we found this out
+        - we should use `ion-item` in `ion-header` if we wan' to use buttons, wrapping `ion-card-title` and `ion-card-subtitle` in `ion-label`
+        - if we use `ion-item` in `ion-card-header` the padding is completely different from first example, which should be the right padding
+    -->
+    <ion-card>
+        <ion-card-header>
+            <ion-item>
+                <ion-label>
+                    <ion-card-title>This should be 20px and not 24px font-size on MD</ion-card-title>
+                    <ion-card-subtitle>Some subtext</ion-card-subtitle>
+                </ion-label>
+                <ion-buttons slot="end">
+                    <ion-button>
+                        <ion-icon slot="icon-only" name="star"></ion-icon>
+                    </ion-button>
+                    <ion-button>
+                        <ion-icon slot="icon-only" name="more"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+            Content
+        </ion-card-content>
+    </ion-card>
+</ion-content>

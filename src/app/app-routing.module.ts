@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'button',
     loadChildren: './pages/button/button.module#ButtonPageModule'
+  },
+  {
+    path: 'cards',
+    loadChildren: './pages/cards/cards.module#CardsPageModule'
   }
 ];
 @NgModule({
